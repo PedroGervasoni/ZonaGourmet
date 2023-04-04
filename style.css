@@ -97,7 +97,7 @@ body {
 
 /* textos dentro del menu */
 .container-text-menu {
-  padding: 10px;
+  padding: 20px;
 }
 
 .h3-title {
@@ -112,6 +112,120 @@ body {
 .dias-menu {
   font-size: 22px;
   font-weight: 400;
+}
+
+/* tutorial */
+.container-general-tutorial {
+  padding: 10px;
+}
+
+.h2-tutorial {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* form */
+.container-general-form {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container-form {
+  height: 480px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+}
+
+.container-nombre-apellido {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.text-nombre {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 7px 10px;
+  background-color: #ABCA68;
+  border-radius: 10px;
+}
+
+.container-selector {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.dias {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.options {
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  background-color: rgba(171, 202, 104, 0.5215686275);
+  border-radius: 10px;
+}
+
+.button {
+  font-weight: 500;
+  width: 100px;
+  border: none;
+  padding: 10px;
+  margin-top: 12px;
+  background-color: rgb(170, 205, 96);
+  color: #141415;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+/* text success */
+.success-text {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  color: #141415;
+}
+
+.footer-container-1 {
+  border-bottom: 16px;
+  background-color: #90B63E;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-2 {
+  border-bottom: 16px;
+  background-color: #ABCA68;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-footer {
+  border-radius: 16px;
+  width: 100px;
+  height: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */

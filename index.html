@@ -68,7 +68,7 @@
           <br>
           <b class="dias-menu"> MARTES:</b> Roll de hojaldré caprese gratinado con ensalada especial.
           <br>
-          <b class="dias-menu"> MIERCOLES:</b> Ravioles con estofado. 
+          <b class="dias-menu"> MIERCOLES:</b> Ravioles con estofado.
           <b class="dias-menu"> JUEVES:</b> Pastel de pollo y papas.
           <br>
           <b class="dias-menu"> VIERNES:</b> Baguette crocante de carne deshilacha con cheddar y cebollas
@@ -90,6 +90,97 @@
 
 
 
+  <section class="container-general-tutorial">
+    <article class="container-tutorial">
+      <h2 class="h2-tutorial">
+        Completa tus datos, elegí tu opción de menú diaria y tocar "enviar" solo una vez
+      </h2>
+    </article>
+  </section>
+
+
+
+
+
+
+
+  <section class="container-general-form">
+    <div class="container-form">
+      <form name="submit-to-google-sheet">
+
+
+        <div class="container-nombre-apellido">
+          <div class="form-nombre">
+            <label class="text-nombre">Nombre:</label>
+            <input class="input" type="text" name="nombre" required />
+          </div>
+
+          <div class="form-apellido">
+            <label class="text-nombre">Apellido:</label>
+            <input class="input" type="text" name="apellido" required />
+          </div>
+        </div>
+
+        <div class="container-selector">
+          <label class="dias" for="selector">Lunes:</label>
+          <select class="options" name="lunes" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <div class="container-selector">
+          <label class="dias" for="selector">Martes:</label>
+          <select class="options" name="martes" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <div class="container-selector">
+          <label class="dias" for="selector">Miercoles:</label>
+          <select class="options" name="miercoles" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <div class="container-selector">
+          <label class="dias" for="selector">Jueves:</label>
+          <select class="options" name="jueves" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <div class="container-selector">
+          <label class="dias" for="selector">Viernes:</label>
+          <select class="options" name="viernes" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+
+        <div class="container-button">
+          <input class="button" type="submit" name="submit" />
+        </div>
+
+        <div class="container-success">
+          <span class="success-text" id="success"></span>
+        </div>
+      </form>
+    </div>
+  </section>
 
 
 
@@ -99,58 +190,38 @@
 
 
 
-  <form name="submit-to-google-sheet">
-    <label>Nombre:</label>
-    <input type="text" name="nombre" required />
-    <label>Apellido:</label>
-    <input type="text" name="apellido" required />
 
-    <label for="selector">Lunes:</label>
-    <select name="lunes" required>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
 
-    <label for="selector">Martes:</label>
-    <select name="martes" required>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+  <!-- <footer class="footer-container-1">
+    <div class="footer-2">
+    <img class="logo-footer" src="images\logo-zona.jpg" alt="logo" height="150px" width="150px" />
+  </div>
+  </footer> -->
 
-    <label for="selector">Miercoles:</label>
-    <select name="miercoles" required>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
 
-    <label for="selector">Jueves:</label>
-    <select name="jueves" required>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
 
-    <label for="selector">Viernes:</label>
-    <select name="viernes" required>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
-    <input type="submit" name="submit" />
-    <span id="success"></span>
-  </form>
 
-  <footer>
-    <img src="images\logo-zona.jpg" alt="logo" height="150px" width="150px" />
-  </footer>
+  <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzRJ1pJW7OhUG3QovwQrlmIYxndMEkor3sVNWhvsu-3RaLUkklFAA_kduFNxYzN0aBA7g/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const success = document.getElementById("success")
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then(response => {
+            success.innerHTML="Menu semanal enviado";
+            
+            setTimeout(function()
+            {
+                success.innerHTML="";
+            },5000)
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
 </body>
 
 </html>
