@@ -3,8 +3,115 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none !important;
-  font-family: "Manrope", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #141415;
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+/* nav */
+.container-general-nav {
+  border-bottom: 16px;
+  height: 101px;
+  background-color: #ABCA68;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  margin-bottom: 70px;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container-logo-h1 {
+  display: flex;
+  background-color: #90B63E;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  height: 85px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-logo {
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  width: 100px;
+  height: 100px;
+  margin-top: 48px;
+}
+
+.logo-nav {
+  border-radius: 16px;
+  width: 100px;
+  height: 100px;
+}
+
+.container-h1 {
+  margin-top: 25px;
+}
+
+.titulo-nav {
+  color: #141415;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+/* menu  semanal  */
+.container-menu-general {
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.container-textos-menu {
+  background-color: white;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+}
+
+.container-menu-semanal-2 {
+  background-color: #ABCA68;
+  height: 85px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container-menu-semanal {
+  display: flex;
+  background-color: #90B63E;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  justify-content: center;
+}
+
+.h2-menu-semanal {
+  padding: 10px;
+  color: #141415;
+  font-weight: 300;
+  font-size: 32px;
+}
+
+/* textos dentro del menu */
+.container-text-menu {
+  padding: 10px;
+}
+
+.h3-title {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.h3-text {
+  font-weight: 300;
+}
+
+.dias-menu {
+  font-size: 22px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

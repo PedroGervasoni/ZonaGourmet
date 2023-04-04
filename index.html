@@ -1,115 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <title>ZonaGourmet</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="autor" content="Pedro Gervasoni" />
-    <meta name="copyright" content="Pedro Gervasoni" />
-    <meta name="robots" content="idex" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0e0e0e" />
-    <link rel="icon" href="logo-ico.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <nav>
-      <img src="images\logo-zona.jpg" alt="logo" height="150px" width="150px" />
+<head>
+  <title>ZonaGourmet</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="autor" content="Pedro Gervasoni" />
+  <meta name="copyright" content="Pedro Gervasoni" />
+  <meta name="robots" content="idex" />
 
-      <h1>ELECCION DE MENU</h1>
-    </nav>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e0e0e" />
+  <link rel="icon" href="logo-ico.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <section>
-      <h2>MENU SEMANAL</h2>
-      <h3>1-ESTANDAR</h3>
-      <h3>
-        LUNES: Hamburguesas de carne crispy con pasta a la crema y queso.
-        MARTES: Roll de hojaldré caprese gratinado con ensalada especial.
-        MIÉRCOLES: Ravioles con estofado. JUEVES: Pastel de pollo y papas.
-        VIERNES: Baguette crocante de carne deshilacha con cheddar y cebollas
-        caramelizadas.
-      </h3>
-      <h3>2-CON ENSALADA</h3>
-      <h3>3-SUPER ENSALADA</h3>
-      <h3>4-OTRA OPCION</h3>
-      <h3>
-        Milanesas de berenjenas rebozadas en panko con puré de calabaza.
-        (MIERCOLES Y JUEVES)
-      </h3>
-    </section>
+<body>
+  <!-- nav -->
+  <nav class="container-general-nav">
+    <div class="container-logo-h1">
+      <div class="container-logo">
+        <img class="logo-nav" src="images\logo-zona.jpg" alt="logo" height="150px" width="150px" />
+      </div>
+      <div class="container-h1">
+        <h1 class="titulo-nav">ELECCION DE MENU</h1>
+      </div>
+    </div>
+  </nav>
 
-    <form name="submit-to-google-sheet">
-        <label>Nombre:</label><br />
-        <input type="text" name="nombre" required /><br /><br />
-        <label>Apellido:</label><br />
-        <input type="text" name="apellido" required /><br /><br />
-  
-        <label for="selector">Lunes:</label>
-        <select name="lunes" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option></select
-        ><br /><br />
-  
-        <label for="selector">Martes:</label>
-        <select name="martes" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option></select
-        ><br /><br />
-  
-        <label for="selector">Miercoles:</label>
-        <select name="miercoles" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option></select
-        ><br /><br />
-  
-        <label for="selector">Jueves:</label>
-        <select name="jueves" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option></select
-        ><br /><br />
-  
-        <label for="selector">Viernes:</label>
-        <select name="viernes" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option></select
-        ><br /><br />
-        <input type="submit" name="submit" /><br>
-        <span id="success"></span>
-      </form>
+
+
+
+
+
+
+  <!-- menu semanal -->
+
+  <section class="container-menu-general">
+
+    <article class="container-textos-menu">
+
+      <div class="container-menu-semanal-2">
+        <div class="container-menu-semanal">
+          <h2 class="h2-menu-semanal">MENU SEMANAL</h2>
+        </div>
+      </div>
+
+
+
+      <div class="container-text-menu">
+        <h3 class="h3-title">1-ESTANDAR</h3>
+        <h3 class="h3-text">
+          <b class="dias-menu"> LUNES:</b> Hamburguesas de carne crispy con pasta a la crema y queso.
+          <br>
+          <b class="dias-menu"> MARTES:</b> Roll de hojaldré caprese gratinado con ensalada especial.
+          <br>
+          <b class="dias-menu"> MIERCOLES:</b> Ravioles con estofado. 
+          <b class="dias-menu"> JUEVES:</b> Pastel de pollo y papas.
+          <br>
+          <b class="dias-menu"> VIERNES:</b> Baguette crocante de carne deshilacha con cheddar y cebollas
+          caramelizadas.
+        </h3>
+        <h3 class="h3-title">2-CON ENSALADA</h3>
+        <h3 class="h3-title">3-SUPER ENSALADA</h3>
+        <h3 class="h3-title">4-OTRA OPCION</h3>
+        <h3 class="h3-text">
+          Milanesas de berenjenas rebozadas en panko con puré de calabaza.
+          (MIERCOLES Y JUEVES)
+        </h3>
+      </div>
+
+
+
+    </article>
+  </section>
 
 
 
@@ -121,8 +98,59 @@
 
 
 
-    <footer>
-        <img src="images\logo-zona.jpg" alt="logo" height="150px" width="150px"/>
-    </footer>
-  </body>
+
+  <form name="submit-to-google-sheet">
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required />
+    <label>Apellido:</label>
+    <input type="text" name="apellido" required />
+
+    <label for="selector">Lunes:</label>
+    <select name="lunes" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <label for="selector">Martes:</label>
+    <select name="martes" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <label for="selector">Miercoles:</label>
+    <select name="miercoles" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <label for="selector">Jueves:</label>
+    <select name="jueves" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+
+    <label for="selector">Viernes:</label>
+    <select name="viernes" required>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
+    <input type="submit" name="submit" />
+    <span id="success"></span>
+  </form>
+
+  <footer>
+    <img src="images\logo-zona.jpg" alt="logo" height="150px" width="150px" />
+  </footer>
+</body>
+
 </html>
