@@ -26,9 +26,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <!-- css -->
   <link rel="stylesheet" href="style.css" />
-
-
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -174,18 +171,27 @@
           </select>
         </div>
 
-        <div class="container-button">
-          <input class="button" type="submit" name="submit" />
-        </div>
-        <form action="?" method="POST">
-          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-          <br/>
-          <input type="submit" value="Submit">
-        </form>
+
+        
+        <form action="#" method="post">
+          <label class="palabraclave" for="clave">Introduce la palabra clave:</label>
+          <input type="text" id="clave" name="clave">
+          <div class="container-button" style="display: none;">
+            <input class="button" type="submit" name="submit" />
+          </div>
+
+
+
+
 
         <div class="container-success">
           <span class="success-text" id="success"></span>
         </div>
+
+
+
+
+
       </form>
     </div>
   </section>
@@ -206,6 +212,27 @@
   </div>
   </footer> -->
 
+  <script>
+      var palabraClave = "ZONAMENU"; // Palabra clave
+      
+      // Función que se ejecuta al enviar el formulario
+      document.querySelector("form").addEventListener("submit", function() {
+        // Ocultar el botón de enviar
+        document.querySelector(".container-button").style.display = "none";
+      });
+      
+      // Función que se ejecuta cada vez que se introduce un carácter en el input
+      document.getElementById("clave").addEventListener("input", function() {
+        var valor = this.value.toUpperCase(); // Convertir el valor a mayúsculas
+        
+        // Si la palabra clave es correcta, mostrar el botón de enviar
+        if (valor === palabraClave) {
+          document.querySelector(".container-button").style.display = "block";
+        } else {
+          document.querySelector(".container-button").style.display = "none";
+        }
+      });
+    </script>
 
 
 
