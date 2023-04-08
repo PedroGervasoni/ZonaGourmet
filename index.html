@@ -64,22 +64,21 @@
       <div class="container-text-menu">
         <h3 class="h3-title">1-ESTANDAR</h3>
         <h3 class="h3-text">
-          <b class="dias-menu"> LUNES:</b> Hamburguesas de carne crispy con pasta a la crema y queso.
+          <b class="dias-menu"> LUNES:</b> Ravioles con salsa rosa.
           <br>
-          <b class="dias-menu"> MARTES:</b> Roll de hojaldré caprese gratinado con ensalada especial.
+          <b class="dias-menu"> MARTES:</b> Milanesas de ternera a caballo .
           <br>
-          <b class="dias-menu"> MIERCOLES:</b> Ravioles con estofado.
-          <b class="dias-menu"> JUEVES:</b> Pastel de pollo y papas.
+          <b class="dias-menu"> MIERCOLES:</b> Medallones de pollo a la pizza  con revuelto de zapallitos  y arroz.
+          <b class="dias-menu"> JUEVES:</b> Wock con pasta y pechuga.
           <br>
-          <b class="dias-menu"> VIERNES:</b> Baguette crocante de carne deshilacha con cheddar y cebollas
-          caramelizadas.
+          <b class="dias-menu"> VIERNES:</b> Bondiola de cerdo al disco con puré mixto.
         </h3>
         <h3 class="h3-title">2-CON ENSALADA</h3>
         <h3 class="h3-title">3-SUPER ENSALADA</h3>
         <h3 class="h3-title">4-OTRA OPCION</h3>
         <h3 class="h3-text">
-          Milanesas de berenjenas rebozadas en panko con puré de calabaza.
-          (MIERCOLES Y JUEVES)
+          Lasagna zucchini ( jueves y viernes ) 
+
         </h3>
       </div>
 
@@ -172,7 +171,7 @@
         </div>
 
 
-        
+
         <form action="#" method="post">
           <label class="palabraclave" for="clave">Introduce la palabra clave:</label>
           <input type="text" id="clave" name="clave">
@@ -184,15 +183,15 @@
 
 
 
-        <div class="container-success">
-          <span class="success-text" id="success"></span>
-        </div>
+          <div class="container-success">
+            <span class="success-text" id="success"></span>
+          </div>
 
 
 
 
 
-      </form>
+        </form>
     </div>
   </section>
 
@@ -213,50 +212,52 @@
   </footer> -->
 
   <script>
-      var palabraClave = "ZONAMENU"; // Palabra clave
-      
-      // Función que se ejecuta al enviar el formulario
-      document.querySelector("form").addEventListener("submit", function() {
-        // Ocultar el botón de enviar
+    var palabraClave = "LINDE"; // Palabra clave
+
+    // Función que se ejecuta al enviar el formulario
+    document.querySelector("form").addEventListener("submit", function () {
+      // Ocultar el botón de enviar
+      document.querySelector(".container-button").style.display = "none";
+    });
+
+    // Función que se ejecuta cada vez que se introduce un carácter en el input
+    document.getElementById("clave").addEventListener("input", function () {
+      var valor = this.value.toUpperCase(); // Convertir el valor a mayúsculas
+
+      // Si la palabra clave es correcta, mostrar el botón de enviar
+      if (valor === palabraClave) {
+        document.querySelector(".container-button").style.display = "block";
+      } else {
         document.querySelector(".container-button").style.display = "none";
-      });
-      
-      // Función que se ejecuta cada vez que se introduce un carácter en el input
-      document.getElementById("clave").addEventListener("input", function() {
-        var valor = this.value.toUpperCase(); // Convertir el valor a mayúsculas
-        
-        // Si la palabra clave es correcta, mostrar el botón de enviar
-        if (valor === palabraClave) {
-          document.querySelector(".container-button").style.display = "block";
-        } else {
-          document.querySelector(".container-button").style.display = "none";
-        }
-      });
-    </script>
+      }
+    });
+  </script>
 
 
 
   <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzRJ1pJW7OhUG3QovwQrlmIYxndMEkor3sVNWhvsu-3RaLUkklFAA_kduFNxYzN0aBA7g/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const success = document.getElementById("success")
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbzRJ1pJW7OhUG3QovwQrlmIYxndMEkor3sVNWhvsu-3RaLUkklFAA_kduFNxYzN0aBA7g/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const success = document.getElementById("success")
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then(response => {
-            success.innerHTML="Menu semanal enviado";
-            
-            setTimeout(function()
-            {
-                success.innerHTML="";
-            },5000)
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(form)
+        })
+        .then(response => {
+          success.innerHTML = "Menu semanal enviado";
+
+          setTimeout(function () {
+            success.innerHTML = "";
+          }, 5000)
+          form.reset();
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+  </script>
 </body>
 
 </html>
